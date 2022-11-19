@@ -39,7 +39,7 @@ public class Main {
         System.out.println("getResult(): " + result.getResult());
         System.out.println("getResult().length: " + result.getResult().length);
         System.out.println("hashCode: " + result.getResult().hashCode());
-        System.out.println("stream stuff: " + Arrays.stream(result.getResult()).toList().get(0).getObject());
+        System.out.println("stream stuff: " + Arrays.stream(result.getResult()).toList().get(0).getId());
 
     }
 }
