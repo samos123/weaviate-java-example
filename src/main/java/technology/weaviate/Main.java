@@ -26,6 +26,7 @@ public class Main {
         HashMap<String, Object> props = new HashMap<String, Object>();
         props.put("title", "Sam");
         props.put("content", "Sam");
+        props.put("wordCount", 9223372036854775807L);
         WeaviateObject wObj = WeaviateObject.builder().className("Article").properties(props).build();
         WeaviateObject[] objects = new WeaviateObject[]{wObj};
 
@@ -40,6 +41,7 @@ public class Main {
         System.out.println("getResult().length: " + result.getResult().length);
         System.out.println("hashCode: " + result.getResult().hashCode());
         System.out.println("stream stuff: " + Arrays.stream(result.getResult()).toList().get(0).getId());
+        System.out.println("wordcount: " + Arrays.stream(result.getResult()).toList().get(0).getProperties().get("wordCount"));
 
     }
 }
